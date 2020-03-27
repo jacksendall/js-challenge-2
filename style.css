@@ -1,0 +1,84 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  margin-top: 5px;
+  border: 2px solid white;
+  border-radius: 3px;
+  width: 10rem;
+}
+
+#query-input {
+  width: 14rem;
+}
+
+.container {
+  margin: 0 120px;
+}
+
+.email-invalid #email-input {
+  border: 2px solid tomato;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.email-invalid .validate {
+  font-size: 12px;
+  color: tomato;
+}
+
+.email-invalid .validate::before {
+  margin-bottom: 4px;
+  content: 'Error: This is not a valid email address.';
+}
+
+.empty-invalid #email-input {
+  border: 2px solid tomato;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.empty-invalid .validate {
+  font-size: 12px;
+  color: tomato;
+}
+
+.empty-invalid .validate::before {
+  margin-bottom: 4px;
+  content: 'Error: Please enter a valid email.';
+}
+
+.input-frame {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  background: wheat;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.input-frame p {
+  margin: 0;
+}
+
+.photo-frame img {
+  left: auto;
+  right: auto;
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */

@@ -3,13 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Javascript Reflection</title>
 </head>
 <body>
-    <form action="post">
-        <input type="text" placeholder="email address..." id="email-input">
-        <button id="submitBtn">Submit</button>
-    </form>
+    <div class="input-frame">
+        <p>Enter your email here:</p>
+        <form action="post" class="" id="form-field">
+            <div class="validate"></div>
+            <input type="text" placeholder="email address..." id="email-input">
+            <button id="submitBtn">Get Image</button>
+            
+            
+        </form>
+        <form action="get" id="searchField">
+            <input type="text" placeholder="Search for a random image..." id="query-input">
+            <button id="searchBtn">Search</button>
+        </form>
+        
+
+
+    </div>
+<div class="">
+    <div class="photo-frame">
+
+    </div>
+    
+</div>
+   
+    <!-- jq -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="js/images.js"></script>
     <script src="js/validate.js"></script>
+
 </body>
 </html>

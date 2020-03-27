@@ -1,0 +1,30 @@
+.email-invalid{
+    #email-input{
+        border: 2px solid tomato;
+        transition: all 500ms;
+    }
+    .validate{
+        font-size: 12px;
+        color: tomato;
+        &::before{
+            margin-bottom: 4px;
+            content: 'Error: This is not a valid email address.';
+        }
+        
+    }
+}
+.empty-invalid{
+    #email-input{
+        border: 2px solid tomato;
+        transition: all 500ms;
+    }
+    .validate{
+        font-size: 12px;
+        color: tomato;
+        &::before{
+            margin-bottom: 4px;
+            content: 'Error: Please enter a valid email.';
+        }
+        
+    }
+}
