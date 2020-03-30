@@ -26,38 +26,33 @@ function searchImages(){
 }
 //save active image
 function saveImage(){
+  //check if element exists with that email as ID
+  if(document.getElementById(`${input.value}`)) {
 
-    //check if element exists with that email as ID
-    if(document.getElementById(`${input.value}`)) {
+    //prepend to that list item //console.log("dupe")
+    var liActive = document.getElementById(`${input.value}`);
+    var image = document.createElement("img");
+    image.src = activeImg;
+    liActive.prepend(image);
 
-      //prepend to that list item //console.log("dupe")
-      var liActive = document.getElementById(`${input.value}`);
-      var image = document.createElement("img");
-      image.src = activeImg;
-      liActive.prepend(image);
+    //if it doesnt
+  } else {
+    //log action to console
+    console.log(input.value+" saved: "+activeImg);
 
-      //if it doesnt
-    } else {
-      //log action to console
-      console.log(input.value+" saved: "+activeImg);
+    //cache elements
+    var li = document.createElement("li");
+    var img = document.createElement("img");
+    var p = document.createElement("p");
 
-      //cache elements
-      var li = document.createElement("li");
-      var img = document.createElement("img");
-      var p = document.createElement("p");
+    p.textContent = input.value;
+    img.src = activeImg;
+    li.appendChild(img);
+    li.appendChild(p);
+    li.id = input.value;
 
-      p.textContent = input.value;
-      img.src = activeImg;
-      li.appendChild(img);
-      li.appendChild(p);
-      li.id = input.value;
-
-      $("#saveList").prepend(li);
-    }
-
-
-
-    
+    $("#saveList").prepend(li);
+  } 
 }
 
 //make sure the form is valid before continue
@@ -98,8 +93,12 @@ $('#form-field').submit(function(event){
     // run the function
     checkForm();
     if(checkForm() == true){
+      //if active image is not blank
+      if(!activeImg == '') 
+      {
         //Save the active image
         saveImage();
+      }
     }
 });
 
