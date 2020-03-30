@@ -20,7 +20,31 @@ input{
 
 @import "validation";
 
+#saveList{
+    background-color: rgba(0,0,0,0.25);
+    right: 0;
+    position: fixed;
+    list-style: none;
+    float: right;
+    margin: 5px;
+    padding: 5px;
+    direction: rtl;
+    li{
+        
+    }
+    p{
+        text-align: right;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        color: white;
+    }
+    img{
+        max-height: 80px;
+    }
+}
+
 .input-frame{
+    
     p{
         margin: 0;
     }
