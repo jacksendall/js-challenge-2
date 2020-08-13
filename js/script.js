@@ -30,6 +30,7 @@ function saveImage(){
   if(document.getElementById(`${input.value}`)) {
 
     //prepend to that list item //console.log("dupe")
+    //cache elements
     var liActive = document.getElementById(`${input.value}`);
     var image = document.createElement("img");
     image.src = activeImg;
