@@ -21,7 +21,6 @@ function searchImages(){
             $('.photo-frame').html(result);
         });
 
-    
 
 }
 //save active image
